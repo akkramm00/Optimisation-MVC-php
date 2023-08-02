@@ -26,8 +26,14 @@ if(isset($_GET['p'])) {
 }
 
   if($page === 'home') {
-    require 'home.php';
+    require 'home.php';// dans cette page on va pouvoir afficher un template html php... en utilisant 'twig'. pour ca il faut installer twug avec composer.
   }
 ?>
+    Pour installer twig , deux manière s'offrent a nous :
+    # installer twig manuellement et ensuite l'inclure 
+    # Soit utiliser composer ' composer require "twig/twig:1.0" ' vue que maintenant est indispensable pour php.
+
+  <h3>INSTALLER COMPOSER</h3>
+     sur un terminal, on initialise composer avec la commande "composer init"
   </body>
 </html>
