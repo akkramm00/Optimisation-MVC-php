@@ -11,5 +11,23 @@
       , les conditions, les boucles et les expréssionsrégulières. Il vous permet également d'ajouter des extensions personnalisées pour étendre ses fonctionnalitées de base. En utilisant Twig avec le modèle de concéption MVC,vous pouvez rendre votre code plus modulaire et facile à maintenir.
        Twig est largement utilisé dans de nombreux frameworks PHP populaires , tels symfony, laravel et Yii.
     </p>
+
+    <h2> Comment utiliser "Twig"?</h2>
+    * commençons par créer une page "index.php" pour pouvoir afficher du HTML...et de pouvoir afficher des page en utilisant des drapeaux (?q=) = la méthode "GET" exemple :
+    si je veux afficher la page contact, j'écris : localhost:8080/?q=contact
+    si je veux afficher la page home , j'écris :  localhost:8080/?q=home
+    Alors pour que tous ca fonctionne on doit ecrire le code nous permettant cet affichage.
+
+
+    <?php
+$page = 'home';
+if(isset($_GET['p'])) {
+  $page = $_GET['p'];
+}
+
+  if($page === 'home') {
+    require 'home.php';
+  }
+?>
   </body>
 </html>
